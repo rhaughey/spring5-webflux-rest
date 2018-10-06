@@ -1,9 +1,9 @@
-package guru.springframework.bootstrap;
+package guru.springframework.spring5webfluxrest.bootstrap;
 
-import guru.springframework.domain.Category;
-import guru.springframework.domain.Vendor;
-import guru.springframework.repositories.CategoryRepository;
-import guru.springframework.repositories.VendorRepository;
+import guru.springframework.spring5webfluxrest.domain.Category;
+import guru.springframework.spring5webfluxrest.domain.Vendor;
+import guru.springframework.spring5webfluxrest.repositories.CategoryRepository;
+import guru.springframework.spring5webfluxrest.repositories.VendorRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -20,6 +20,10 @@ public class Bootstrap implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
+        System.out.println("IS THIS THING ON?!?!");
+
+
         if(categoryRepository.count().block() == 0){
             //load data
             System.out.println("#### LOADING CATEGORY DATA ON BOOTSTRAP ####");
